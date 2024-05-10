@@ -1,5 +1,8 @@
+var roundCount = 0;
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
+    var tickSound = document.querySelector("#sound");
+    var scooby = document.querySelector("#sound2");
     setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
@@ -12,6 +15,11 @@ function startTimer(duration, display) {
         if (--timer < 0) {
             timer = duration;
             displayDrinkAnimation();
+            updateRoundCount();
+            scooby.play();
+        }
+        else{
+            tickSound.play();
         }
     }, 1000);
 }
@@ -24,8 +32,19 @@ function displayDrinkAnimation() {
     }, 3000); // Change 3000 to adjust how long the animation stays visible (in milliseconds)
 }
 
+function updateRoundCount(){
+    roundCount++;
+    document.querySelector("#roundCount").textContent = roundCount;
+}
+
 window.onload = function () {
-    var oneMinute = 60,
-        display = document.querySelector('#timer');
-    startTimer(oneMinute, display);
+    document.querySelector("#timer").style.display = "none";
+    var oneMinute = 60;
+    display = document.querySelector('#timer');
+    document.querySelector('#startButton').addEventListener('click', function() {
+        document.querySelector('#timer').style.display = 'block';
+        var startButton = document.querySelector('#startButton');
+        startButton.style.display = 'none'; // Hide the button once clicked
+        startTimer(oneMinute, display);
+    });
 };
