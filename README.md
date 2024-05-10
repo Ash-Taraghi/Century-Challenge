@@ -24,8 +24,9 @@ The Century Challenge App is designed to help you track and manage your progress
 4. Celebrate your accomplishment when you reach the finish line!
 
 ## Installation
-To use the Century Challenge App, simply clone this repository to your local machine and open the `index.html` file in your web browser. That's it! No installation required.
-# Will be deploying on a free domain soon
+To use the Century Challenge App, simply clone this repository to your local machine and open the `index.html` file in your web browser. That's it! No installation required. <br>
+Will be deploying on a free domain soon<br>
+Deployed domain: [click here](https://ash-taraghi.github.io/Century-Challenge/)<br>
 
 ## Feedback
 If you have any feedback, suggestions, or encounter any issues while using the app, please feel free to open an issue in this repository or email ash.taraghi@gmail.com. Your feedback is valuable and will help improve the app for everyone.
