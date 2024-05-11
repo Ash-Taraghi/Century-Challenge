@@ -37,6 +37,11 @@ function updateRoundCount(){
     document.querySelector("#roundCount").textContent = roundCount;
 }
 
+function sambuka(){
+    // function to make sambuka noise
+    var audioPlayer = document.querySelector("#sound3");
+    audioPlayer.play();
+}
 window.onload = function () {
     document.querySelector("#timer").style.display = "none";
     var oneMinute = 60;
@@ -48,3 +53,5 @@ window.onload = function () {
         startTimer(oneMinute, display);
     });
 };
+
+setInterval(sambuka, 20 * 60 * 1000);
